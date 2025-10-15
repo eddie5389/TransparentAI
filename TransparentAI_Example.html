@@ -8319,6 +8319,21 @@ Successfully installed aif360-0.6.1
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Descripción del modelo analizado</strong></p>
+<p>En este demo se analiza un modelo de <strong>clasificación supervisada</strong> basado en el conjunto de datos <strong>Adult</strong> del repositorio UCI (<a href="https://www.openml.org/d/1590">Adult Dataset - OpenML</a>), utilizado para predecir si una persona gana más de 50K al año.</p>
+<p>El modelo se entrena con un <strong>Random Forest Classifier</strong> de <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html"><code>scikit-learn</code></a> y se evalúa considerando el atributo sensible <strong>sexo (Male/Female)</strong>.</p>
+<p>Para evaluar la equidad del modelo, se utilizan métricas proporcionadas por la librería <strong>AI Fairness 360 (AIF360)</strong> de IBM (<a href="https://aif360.readthedocs.io/en/latest/">AIF360 Documentation</a>), como <em>Disparate Impact</em> y <em>Statistical Parity Difference</em>.</p>
+<p>Además, se aplica la técnica de mitigación <strong>Reweighing</strong>, incluida en AIF360, con el fin de reducir el sesgo y mejorar la <strong>justicia y equidad</strong> en las predicciones del modelo.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8328,7 +8343,7 @@ Successfully installed aif360-0.6.1
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># ===========================================</span>
-<span class="c1"># Cálculo de métricas de equidad corregido</span>
+<span class="c1"># Cálculo de métricas de equidad</span>
 <span class="c1"># ===========================================</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">aif360.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">BinaryLabelDataset</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">aif360.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClassificationMetric</span>
